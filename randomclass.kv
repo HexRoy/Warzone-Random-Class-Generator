@@ -1,0 +1,42 @@
+GuiManager:
+    HomeGui:
+    SettingsGui:
+
+# ==========================================================================================
+#       Home Gui:
+# ==========================================================================================
+<HomeGui>:
+    name: "home"
+    home_text_grid_layout: homeTextGridLayout
+    home_image_grid_layout: homeImageGridLayout
+    Button:
+        size_hint: .1, .1
+        pos_hint: {"x": .9, "y": .9}
+        text: "Settings"
+
+    Button:
+        size_hint: .25, .1
+        pos_hint: {"x": .375}
+        text: "Generate"
+        on_release:
+            root.generate_class()
+
+    GridLayout:
+        id: homeTextGridLayout
+        cols: 1
+        spacing: [0, 0.1 * root.height]
+        size_hint: .5, .5
+        pos_hint: {'x': .05, 'y':.2}
+
+    GridLayout:
+        id: homeImageGridLayout
+        cols: 1
+        size_hint: .5, .5
+        pos_hint: {'x': .45, 'y':.2}
+
+
+# ==========================================================================================
+#       Setting Gui:
+# ==========================================================================================
+<SettingsGui>:
+    name: "settings"
