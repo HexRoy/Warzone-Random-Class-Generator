@@ -9,10 +9,14 @@ GuiManager:
     name: "home"
     home_text_grid_layout: homeTextGridLayout
     home_image_grid_layout: homeImageGridLayout
+
     Button:
         size_hint: .1, .1
         pos_hint: {"x": .9, "y": .9}
         text: "Settings"
+        on_release:
+            app.root.current = "settings"
+            app.root.transition.direction = "left"
 
     Button:
         size_hint: .25, .1
@@ -40,3 +44,113 @@ GuiManager:
 # ==========================================================================================
 <SettingsGui>:
     name: "settings"
+    use_overkill: UseOverkill
+    assault_rifles: AssaultRifles
+    smgs: SMGs
+    lmgs: LMGs
+    shotguns: Shotguns
+    tactical_rifles: TacticalRifles
+    marksmen_rifles: MarksmenRifles
+    sniper_rifles: SniperRifles
+    melee_primary: MeleePrimary
+    melee_secondary: MeleeSecondary
+    pistols: Pistols
+    rocket_launchers: RocketLaunchers
+
+    Button:
+        size_hint: .1, .1
+        pos_hint: {"x": .9, "y": .9}
+        text: "Home"
+        on_release:
+            app.root.current = "home"
+            app.root.transition.direction = "right"
+
+    Label:
+        text: "Default: All guns are selected and overkill is disabled"
+        pos_hint: {"x": -.25, "y": .45}
+
+    ToggleButton:
+        text: "Use Overkill"
+        pos_hint: {"x": .10, "y": .7}
+        size_hint: .3, .1
+        id: UseOverkill
+        state: 'down'
+        on_press:
+            root.toggle_overkill()
+    ToggleButton:
+        text: "Assault Rifles"
+        pos_hint: {"x": .10, "y": .6}
+        size_hint: .3, .1
+        id: AssaultRifles
+        on_press:
+            root.toggle_assault_rifles()
+    ToggleButton:
+        text: "SMGs"
+        pos_hint: {"x": .10, "y": .5}
+        size_hint: .3, .1
+        id: SMGs
+        on_press:
+            root.toggle_smgs()
+    ToggleButton:
+        text: "LMGs"
+        pos_hint: {"x": .10, "y": .4}
+        size_hint: .3, .1
+        id: LMGs
+        on_press:
+            root.toggle_lmgs()
+    ToggleButton:
+        text: "Shotguns"
+        pos_hint: {"x": .10, "y": .3}
+        size_hint: .3, .1
+        id: Shotguns
+        on_press:
+            root.toggle_shotguns()
+    ToggleButton:
+        text: "Tactical Rifles"
+        pos_hint: {"x": .10, "y": .2}
+        size_hint: .3, .1
+        id: TacticalRifles
+        on_press:
+            root.toggle_tactical_rifles()
+    ToggleButton:
+        text: "Marksmen Rifles"
+        pos_hint: {"x": .60, "y": .7}
+        size_hint: .3, .1
+        id: MarksmenRifles
+        on_press:
+            root.toggle_marksmen_rifles()
+    ToggleButton:
+        text: "Sniper Rifles"
+        pos_hint: {"x": .60, "y": .6}
+        size_hint: .3, .1
+        id: SniperRifles
+        on_press:
+            root.toggle_sniper_rifles()
+    ToggleButton:
+        text: "Melee Primary"
+        pos_hint: {"x": .60, "y": .5}
+        size_hint: .3, .1
+        id: MeleePrimary
+        on_press:
+            root.toggle_melee_primary()
+    ToggleButton:
+        text: "Melee Secondary"
+        pos_hint: {"x": .60, "y": .4}
+        size_hint: .3, .1
+        id: MeleeSecondary
+        on_press:
+            root.toggle_melee_secondary()
+    ToggleButton:
+        text: "Pistols"
+        pos_hint: {"x": .60, "y": .3}
+        size_hint: .3, .1
+        id: Pistols
+        on_press:
+            root.toggle_pistols()
+    ToggleButton:
+        text: "Rocket Launchers"
+        pos_hint: {"x": .60, "y": .2}
+        size_hint: .3, .1
+        id: RocketLaunchers
+        on_press:
+            root.toggle_rocket_launchers()
