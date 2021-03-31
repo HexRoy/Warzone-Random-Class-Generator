@@ -1,15 +1,15 @@
 # PERKS
-USER_OVERKILL: False
+Use_Overkill: False
 
 # GUNS
-ASSAULT_RIFLES: True
-SMGS: True
-LMGS: True
-SHOTGUNS: True
-TACTICAL_RIFLES: True
-MARKSMEN_RIFLES: True
-SNIPER_RIFLES: True
-MELEE_PRIMARY: True
-MELEE_SECONDARY: True
-PISTOLS: True
-ROCKET_LAUNCHERS: True
+Assault_Rifles: True
+Submachine_Guns: True
+Light_Machine_Guns: True
+Shotguns: True
+Tactical_Rifle: True
+Marksmen_Rifles: True
+Sniper_Rifles: True
+Melee_Primary: True
+Melee_Secondary: True
+Pistols: True
+Rocket_Launchers: True
