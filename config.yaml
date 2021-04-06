@@ -2,7 +2,7 @@ Assault_Rifles: true
 Light_Machine_Guns: true
 Marksmen_Rifles: true
 Melee_Primary: true
-Melee_Secondary: true
+Melee_Secondary: false
 Pistols: true
 Rocket_Launchers: true
 Shotguns: true

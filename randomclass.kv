@@ -9,6 +9,12 @@ GuiManager:
     name: "home"
     home_text_grid_layout: homeTextGridLayout
     home_image_grid_layout: homeImageGridLayout
+    canvas:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: "assets/background.jpg"
+
 
     Button:
         size_hint: .1, .1
@@ -56,6 +62,11 @@ GuiManager:
     melee_secondary: MeleeSecondary
     pistols: Pistols
     rocket_launchers: RocketLaunchers
+    canvas:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: "assets/settingsbackground.jpg"
 
     Button:
         size_hint: .1, .1

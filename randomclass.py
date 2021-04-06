@@ -84,8 +84,8 @@ class HomeGui(Screen):
             gun_one = choice(primary_gun_list)
             gun_two = choice(primary_gun_list)
 
-        gun_one_name = Label(text="Primary:    " + gun_one)
-        gun_two_name = Label(text="Secondary:  " + gun_two)
+        gun_one_name = Label(text="Primary:    " + gun_one, bold=True, font_size=30)
+        gun_two_name = Label(text="Secondary:  " + gun_two, bold=True, font_size=30)
         gun_one_image = Image(source=resource_path('assets/gun_photos/' + gun_one + '.png'))
         gun_two_image = Image(source=resource_path('assets/gun_photos/' + gun_two + '.png'))
 
