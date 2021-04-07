@@ -12,7 +12,7 @@
 
 ## Home Screen: after generating a class
 
- ![alt text](https://github.com/HexRoy/Warzone-Random-Class-Generator/tree/master/assets/readme/after.png)
+ ![alt text](https://raw.githubusercontent.com/HexRoy/Warzone-Random-Class-Generator/master/assets/readme/after.png)
 
 ## Settings
 
