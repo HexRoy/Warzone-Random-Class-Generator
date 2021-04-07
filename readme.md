@@ -16,4 +16,4 @@
 
 ## Settings
 
- ![alt text](https://github.com/HexRoy/Warzone-Random-Class-Generator/tree/master/assets/readme/settings.png)
+ ![alt text](https://github.com/HexRoy/Warzone-Random-Class-Generator/blob/master/assets/readme/settings.png?raw=true)
