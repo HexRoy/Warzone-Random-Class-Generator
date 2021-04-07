@@ -8,7 +8,7 @@
 
 ## Home Screen: before generating a class
 
- ![alt text](https://github.com/HexRoy/Warzone-Random-Class-Generator/tree/master/assets/readme/before.png)
+ ![alt text](https://github.com/HexRoy/Warzone-Random-Class-Generator/blob/master/assets/readme/before.png?raw=true)
 
 ## Home Screen: after generating a class
 
