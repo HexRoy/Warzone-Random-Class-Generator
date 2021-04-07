@@ -7,8 +7,8 @@
 - Run using randomclass.exe
 
 ## Home Screen: before generating a class
- ![alt text](https://github.com/HexRoy/Warzone-Random-Class-Generator/tree/master/assets/readme/before.png)
+![alt text](https://github.com/HexRoy/Warzone-Random-Class-Generator/tree/master/assets/readme/before.png)
 ## Home Screen: after generating a class
- ![alt text](https://github.com/HexRoy/Warzone-Random-Class-Generator/tree/master/assets/readme/after.png)
+![alt text](https://github.com/HexRoy/Warzone-Random-Class-Generator/tree/master/assets/readme/after.png)
 ## Settings
- ![alt text](https://github.com/HexRoy/Warzone-Random-Class-Generator/tree/master/assets/readme/settings.png)
+![alt text](https://github.com/HexRoy/Warzone-Random-Class-Generator/tree/master/assets/readme/settings.png)
