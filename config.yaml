@@ -1,12 +1,12 @@
-Assault_Rifles: true
-Light_Machine_Guns: true
-Marksmen_Rifles: true
-Melee_Primary: true
-Melee_Secondary: false
-Pistols: true
-Rocket_Launchers: true
-Shotguns: true
-Sniper_Rifles: true
-Submachine_Guns: true
-Tactical_Rifle: true
+Assault Rifle: true
+Light Machine Gun: true
+Marksmen Rifle: true
+Melee Primary: true
+Melee Secondary: true
+Pistol: true
+Rocket Launcher: true
+Shotgun: true
+Sniper Rifle: true
+Submachine Gun: true
+Tactical Rifle: true
 Use_Overkill: true

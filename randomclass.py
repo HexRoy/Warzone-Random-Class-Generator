@@ -28,9 +28,13 @@ class HomeGui(Screen):
 
     def __init__(self, **kwargs):
         super(Screen, self).__init__(**kwargs)
-        self.selected_guns = ['Assault_Rifles', 'Submachine_Guns', 'Shotguns', 'Light_Machine_Guns', 'Tactical_Rifle', 'Marksmen_Rifles', 'Sniper_Rifles', 'Melee_Primary', 'Rocket_Launchers', 'Pistols', 'Melee_Secondary']
-        self.primary_guns = ['Assault_Rifles', 'Submachine_Guns', 'Shotguns', 'Light_Machine_Guns', 'Tactical_Rifle', 'Marksmen_Rifles', 'Sniper_Rifles', 'Melee_Primary']
-        self.secondary_guns = ['Rocket_Launchers', 'Pistols', 'Melee_Secondary']
+        # self.selected_guns = ['Assault_Rifles', 'Submachine_Guns', 'Shotguns', 'Light_Machine_Guns', 'Tactical_Rifle', 'Marksmen_Rifles', 'Sniper_Rifles', 'Melee_Primary', 'Rocket_Launchers', 'Pistols', 'Melee_Secondary']
+        # self.primary_guns = ['Assault_Rifles', 'Submachine_Guns', 'Shotguns', 'Light_Machine_Guns', 'Tactical_Rifle', 'Marksmen_Rifles', 'Sniper_Rifles', 'Melee_Primary']
+        # self.secondary_guns = ['Rocket_Launchers', 'Pistols', 'Melee_Secondary']
+
+        self.selected_guns = ['Assault Rifle', 'Submachine Gun', 'Shotgun', 'Light Machine Gun', 'Tactical Rifle', 'Marksmen Rifle', 'Sniper Rifle', 'Melee Primary', 'Rocket Launcher', 'Pistol', 'Melee Secondary']
+        self.primary_guns = ['Assault Rifle', 'Submachine Gun', 'Shotgun', 'Light Machine Gun', 'Tactical Rifle', 'Marksmen Rifle', 'Sniper Rifle', 'Melee Primary']
+        self.secondary_guns = ['Rocket Launcher', 'Pistol', 'Melee Secondary']
         self.use_overkill = False
 
     def on_enter(self, *args):
@@ -45,6 +49,7 @@ class HomeGui(Screen):
             config_file = yaml.load(file, Loader=yaml.FullLoader)
         temp_gun_list = []
         for entry in config_file:
+            print(entry)
             if (entry in self.primary_guns) or (entry in self.secondary_guns):
                 if config_file[entry]:
                     temp_gun_list.append(entry)
@@ -84,10 +89,20 @@ class HomeGui(Screen):
             gun_one = choice(primary_gun_list)
             gun_two = choice(primary_gun_list)
 
+        print("Gun 1:", gun_one, '\nGun 2:', gun_two)
+
         gun_one_name = Label(text="Primary:    " + gun_one, bold=True, font_size=30)
         gun_two_name = Label(text="Secondary:  " + gun_two, bold=True, font_size=30)
-        gun_one_image = Image(source=resource_path('assets/gun_photos/' + gun_one + '.png'))
-        gun_two_image = Image(source=resource_path('assets/gun_photos/' + gun_two + '.png'))
+
+        if os.path.isfile('assets/gun_photos/' + gun_one + '.png'):
+            gun_one_image = Image(source=resource_path('assets/gun_photos/' + gun_one + '.png'))
+        else:
+            gun_one_image = Image(source=resource_path('assets/gun_photos/' + 'None.png'))
+
+        if os.path.isfile('assets/gun_photos/' + gun_two + '.png'):
+            gun_two_image = Image(source=resource_path('assets/gun_photos/' + gun_two + '.png'))
+        else:
+            gun_two_image = Image(source=resource_path('assets/gun_photos/' + 'None.png'))
 
         self.home_text_grid_layout.add_widget(gun_one_name)
         self.home_image_grid_layout.add_widget(gun_one_image)
@@ -119,57 +134,57 @@ class SettingsGui(Screen):
         else:
             self.use_overkill.state = 'normal'
 
-        if config['Assault_Rifles']:
+        if config['Assault Rifle']:
             self.assault_rifles.state = 'down'
         else:
             self.assault_rifles.state = 'normal'
 
-        if config['Submachine_Guns']:
+        if config['Submachine Gun']:
             self.smgs.state = 'down'
         else:
             self.smgs.state = 'normal'
 
-        if config['Light_Machine_Guns']:
+        if config['Light Machine Gun']:
             self.lmgs.state = 'down'
         else:
             self.lmgs.state = 'normal'
 
-        if config['Shotguns']:
+        if config['Shotgun']:
             self.shotguns.state = 'down'
         else:
             self.shotguns.state = 'normal'
 
-        if config['Tactical_Rifle']:
+        if config['Tactical Rifle']:
             self.tactical_rifles.state = 'down'
         else:
             self.tactical_rifles.state = 'normal'
 
-        if config['Marksmen_Rifles']:
+        if config['Marksmen Rifle']:
             self.marksmen_rifles.state = 'down'
         else:
             self.marksmen_rifles.state = 'normal'
 
-        if config['Sniper_Rifles']:
+        if config['Sniper Rifle']:
             self.sniper_rifles.state = 'down'
         else:
             self.sniper_rifles.state = 'normal'
 
-        if config['Melee_Primary']:
+        if config['Melee Primary']:
             self.melee_primary.state = 'down'
         else:
             self.melee_primary.state = 'normal'
 
-        if config['Melee_Secondary']:
+        if config['Melee Secondary']:
             self.melee_secondary.state = 'down'
         else:
             self.melee_secondary.state = 'normal'
 
-        if config['Pistols']:
+        if config['Pistol']:
             self.pistols.state = 'down'
         else:
             self.pistols.state = 'normal'
 
-        if config['Rocket_Launchers']:
+        if config['Rocket Launcher']:
             self.rocket_launchers.state = 'down'
         else:
             self.rocket_launchers.state = 'normal'
