@@ -49,7 +49,6 @@ class HomeGui(Screen):
             config_file = yaml.load(file, Loader=yaml.FullLoader)
         temp_gun_list = []
         for entry in config_file:
-            print(entry)
             if (entry in self.primary_guns) or (entry in self.secondary_guns):
                 if config_file[entry]:
                     temp_gun_list.append(entry)
@@ -205,10 +204,10 @@ class SettingsGui(Screen):
     def toggle_assault_rifles():
         with open('config.yaml') as file:
             config_file = yaml.load(file, Loader=yaml.FullLoader)
-            if config_file['Assault_Rifles'] is True:
-                config_file['Assault_Rifles'] = False
+            if config_file['Assault Rifle'] is True:
+                config_file['Assault Rifle'] = False
             else:
-                config_file['Assault_Rifles'] = True
+                config_file['Assault Rifle'] = True
 
         with open('config.yaml', 'w') as file2:
             yaml.dump(config_file, file2)
@@ -217,10 +216,10 @@ class SettingsGui(Screen):
     def toggle_smgs():
         with open('config.yaml') as file:
             config_file = yaml.load(file, Loader=yaml.FullLoader)
-            if config_file['Submachine_Guns'] is True:
-                config_file['Submachine_Guns'] = False
+            if config_file['Submachine Gun'] is True:
+                config_file['Submachine Gun'] = False
             else:
-                config_file['Submachine_Guns'] = True
+                config_file['Submachine Gun'] = True
 
         with open('config.yaml', 'w') as file2:
             yaml.dump(config_file, file2)
@@ -229,10 +228,10 @@ class SettingsGui(Screen):
     def toggle_lmgs():
         with open('config.yaml') as file:
             config_file = yaml.load(file, Loader=yaml.FullLoader)
-            if config_file['Light_Machine_Guns'] is True:
-                config_file['Light_Machine_Guns'] = False
+            if config_file['Light_Machine Gun'] is True:
+                config_file['Light_Machine Gun'] = False
             else:
-                config_file['Light_Machine_Guns'] = True
+                config_file['Light Machine_Gun'] = True
 
         with open('config.yaml', 'w') as file2:
             yaml.dump(config_file, file2)
@@ -241,10 +240,10 @@ class SettingsGui(Screen):
     def toggle_shotguns():
         with open('config.yaml') as file:
             config_file = yaml.load(file, Loader=yaml.FullLoader)
-            if config_file['Shotguns'] is True:
-                config_file['Shotguns'] = False
+            if config_file['Shotgun'] is True:
+                config_file['Shotgun'] = False
             else:
-                config_file['Shotguns'] = True
+                config_file['Shotgun'] = True
 
         with open('config.yaml', 'w') as file2:
             yaml.dump(config_file, file2)
@@ -253,10 +252,10 @@ class SettingsGui(Screen):
     def toggle_tactical_rifles():
         with open('config.yaml') as file:
             config_file = yaml.load(file, Loader=yaml.FullLoader)
-            if config_file['Tactical_Rifle'] is True:
-                config_file['Tactical_Rifle'] = False
+            if config_file['Tactical Rifle'] is True:
+                config_file['Tactical Rifle'] = False
             else:
-                config_file['Tactical_Rifle'] = True
+                config_file['Tactical Rifle'] = True
 
         with open('config.yaml', 'w') as file2:
             yaml.dump(config_file, file2)
@@ -265,10 +264,10 @@ class SettingsGui(Screen):
     def toggle_marksmen_rifles():
         with open('config.yaml') as file:
             config_file = yaml.load(file, Loader=yaml.FullLoader)
-            if config_file['Marksmen_Rifles'] is True:
-                config_file['Marksmen_Rifles'] = False
+            if config_file['Marksmen Rifle'] is True:
+                config_file['Marksmen Rifle'] = False
             else:
-                config_file['Marksmen_Rifles'] = True
+                config_file['Marksmen Rifle'] = True
 
         with open('config.yaml', 'w') as file2:
             yaml.dump(config_file, file2)
@@ -277,10 +276,10 @@ class SettingsGui(Screen):
     def toggle_sniper_rifles():
         with open('config.yaml') as file:
             config_file = yaml.load(file, Loader=yaml.FullLoader)
-            if config_file['Sniper_Rifles'] is True:
-                config_file['Sniper_Rifles'] = False
+            if config_file['Sniper Rifle'] is True:
+                config_file['Sniper Rifle'] = False
             else:
-                config_file['Sniper_Rifles'] = True
+                config_file['Sniper Rifle'] = True
 
         with open('config.yaml', 'w') as file2:
             yaml.dump(config_file, file2)
@@ -289,10 +288,10 @@ class SettingsGui(Screen):
     def toggle_melee_primary():
         with open('config.yaml') as file:
             config_file = yaml.load(file, Loader=yaml.FullLoader)
-            if config_file['Melee_Primary'] is True:
-                config_file['Melee_Primary'] = False
+            if config_file['Melee Primary'] is True:
+                config_file['Melee Primary'] = False
             else:
-                config_file['Melee_Primary'] = True
+                config_file['Melee Primary'] = True
 
         with open('config.yaml', 'w') as file2:
             yaml.dump(config_file, file2)
@@ -301,10 +300,10 @@ class SettingsGui(Screen):
     def toggle_melee_secondary():
         with open('config.yaml') as file:
             config_file = yaml.load(file, Loader=yaml.FullLoader)
-            if config_file['Melee_Secondary'] is True:
-                config_file['Melee_Secondary'] = False
+            if config_file['Melee Secondary'] is True:
+                config_file['Melee Secondary'] = False
             else:
-                config_file['Melee_Secondary'] = True
+                config_file['Melee Secondary'] = True
 
         with open('config.yaml', 'w') as file2:
             yaml.dump(config_file, file2)
@@ -313,10 +312,10 @@ class SettingsGui(Screen):
     def toggle_pistols():
         with open('config.yaml') as file:
             config_file = yaml.load(file, Loader=yaml.FullLoader)
-            if config_file['Pistols'] is True:
-                config_file['Pistols'] = False
+            if config_file['Pistol'] is True:
+                config_file['Pistol'] = False
             else:
-                config_file['Pistols'] = True
+                config_file['Pistol'] = True
 
         with open('config.yaml', 'w') as file2:
             yaml.dump(config_file, file2)
@@ -325,10 +324,10 @@ class SettingsGui(Screen):
     def toggle_rocket_launchers():
         with open('config.yaml') as file:
             config_file = yaml.load(file, Loader=yaml.FullLoader)
-            if config_file['Rocket_Launchers'] is True:
-                config_file['Rocket_Launchers'] = False
+            if config_file['Rocket Launcher'] is True:
+                config_file['Rocket Launcher'] = False
             else:
-                config_file['Rocket_Launchers'] = True
+                config_file['Rocket Launcher'] = True
 
         with open('config.yaml', 'w') as file2:
             yaml.dump(config_file, file2)
